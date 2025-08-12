@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.start-up {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.start-up .overlap-group-wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-up .overlap-group {
+  background: url(../../assets/images/start-up-1.png) center / cover no-repeat fixed;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.start-up .text-wrapper {
+  position: absolute;
+  top: 30%;
+  left: 6%;
+  max-width: 600px;
+}
+
+.start-up .greeting-text {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px #000000;
+  margin-bottom: -15px;
+}
+
+.start-up .p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px #000000;
+  margin-bottom: 10px;
+}
+
+.start-up .instruction {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.start-up .instruction-text {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.start-up .vector {
+  height: 10px;
+  width: 13px;
+}
+
+.start-up .privacy {
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px #000000;
+  max-width: 350px;
+}
+
+.start-up .privacy-text {
+  color: #3ab9fe;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.start-up .button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.start-up .office-school-button{
+  background-color: #ffd700;
+  border-radius: 5px;
+  color: #ffffff;
+  box-shadow: 2px 4px 4px #0000004c;
+  height: 40px;
+  width: 180px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.start-up .focal-personnels{
+  background-color: #ff0000;
+  border-radius: 5px;
+  color: #ffffff;
+  box-shadow: 2px 4px 4px #0000004c;
+  height: 40px;
+  width: 180px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
