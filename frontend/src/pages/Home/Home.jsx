@@ -2,18 +2,29 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import vector from "../../assets/images/vector.png";
+// import logo from "../../assets/images/logo.png";
 
 const Home = () => {
   const navigate = useNavigate();
 
-  const handleNavigation = () => {
-    navigate("/login");
+  const handleSchoolNavigation = () => {
+    navigate("/login/school"); // Navigates to school login
+  };
+
+  const handleOfficeNavigation = () => {
+    navigate("/login/office"); // Navigates to office login
   };
 
   return (
     <main className="home-container">
       <div className="content-wrapper">
         <div className="greeting-section">
+          {/* <img 
+            className="logo-image" 
+            src={logo} 
+            alt="logo" 
+            aria-hidden="true"
+          /> */}
           <h1 className="greeting-text">Magandang Buhay!</h1>
           <p className="welcome-text">
             Welcome to DepEd Biñan Record Monitoring System
@@ -35,14 +46,14 @@ const Home = () => {
         <div className="button-group">
           <button 
             className="btn-school" 
-            onClick={handleNavigation}
+            onClick={handleSchoolNavigation}  // Updated handler
             aria-label="Navigate to School login"
           >
             School
           </button>
           <button 
             className="btn-office" 
-            onClick={handleNavigation}
+            onClick={handleOfficeNavigation}  // Updated handler
             aria-label="Navigate to Office login"
           >
             Office

@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./login.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi"; 
+import logo from "../../assets/images/logo.png";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState("");
   const [isHovering, setIsHovering] = useState(false);
+  const navigate = useNavigate(); // Added navigation hook
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,6 +18,18 @@ const Login = () => {
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  const handleRegisterClick = (e) => {
+    e.preventDefault();
+    
+    if (location.pathname.includes("/login/school")) {
+      navigate("/register/school");
+    } else if (location.pathname.includes("/login/office")) {
+      navigate("/register/office");
+    } else {
+      navigate("/register");
+    }
   };
 
   return (
@@ -86,7 +101,18 @@ const Login = () => {
 
       <div className="register-section">
         <p className="register-text">
-          Need an account? <a href="#register" className="register-link">Register here</a>
+          Need an account?{" "}
+          <a
+            href={
+              location.pathname.includes("/login/school")
+                ? "/register/school"
+                : "/register/office"
+            }
+            className="register-link"
+            onClick={handleRegisterClick}
+          >
+            Register here
+          </a>
         </p>
       </div>
 

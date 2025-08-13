@@ -10,9 +10,15 @@
   position: relative;
   width: 100%;
   padding: 2rem;
-  margin-top: 20vh;
   margin-left: 5%;
 }
+
+/* .logo-image {
+  width: 15rem;
+  height: auto;
+  margin-bottom: -1rem; 
+  display: block; 
+} */
 
 .greeting-section {
   margin-bottom: 1.5rem;
@@ -23,7 +29,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  margin-bottom: 0rem;
+  margin-bottom: 0.5rem; /* Reduced from 0rem to add space */
 }
 
 .welcome-text {
