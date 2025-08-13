@@ -5,7 +5,6 @@ import vector from "../../assets/images/vector.png";
 
 const Home = () => {
   const navigate = useNavigate();
-
   const handleNavigation = () => {
     navigate("/login");
   };
