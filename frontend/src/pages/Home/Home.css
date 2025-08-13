@@ -1,62 +1,3 @@
-.home-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
-  width: 100%;
-}
-
-.content-wrapper {
-  position: relative;
-  width: 100%;
-  padding: 2rem;
-  margin-top: 20vh;
-  margin-left: 5%;
-}
-
-.greeting-section {
-  margin-bottom: 1.5rem;
-}
-
-.greeting-text {
-  color: #ffffff;
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  margin-bottom: 0rem;
-}
-
-.welcome-text {
-  color: #ffffff;
-  font-size: 0.875rem;
-  font-weight: 400;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  margin: 0;
-}
-
-.instruction-section {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 1.5rem 0;
-}
-
-.instruction-text {
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.pointer-icon {
-  height: 10px;
-  width: 13px;
-}
-
-.button-group {
-  display: flex;
-  gap: 1rem;
-
 /* Base Styles */
 * {
   margin: 0;
@@ -158,70 +99,14 @@
 }
 
 .btn-school, .btn-office {
-  border-radius: 5px;
-  color: #ffffff;
-  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
-  height: 35px;
   width: 180px;
+  padding: 18px 0;
+  border-radius: 50px;
   border: none;
-  padding: 5px 20px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-school {
-  background-color: #ffd700;
-}
-
-.btn-office {
-  background-color: #ff0000;
-}
-
-.btn-school:hover, .btn-office:hover {
-  transform: translateY(-2px);
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4);
-}
-
-.btn-school:active, .btn-office:active {
-  transform: translateY(0);
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
-}
-
-.privacy-notice {
-  margin-top: 2rem;
-  color: #ffffff;
-  font-size: 0.625rem;
-  font-weight: 400;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  max-width: 350px;
-}
-
-.link {
-  color: #3ab9fe;
-  font-weight: 600;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-
-@media (max-width: 768px) {
-  .content-wrapper {
-    margin-left: 2%;
-    margin-top: 5vh;
-  }
-  
-  .greeting-text {
-    font-size: 2rem;
-    width: 180px;
-    padding: 18px 0;
-    border-radius: 50px;
-    border: none;
-    font-size: 1.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-school {
@@ -299,87 +184,33 @@
   
   .button-group {
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn-school, .btn-office {
+    width: 150px;
+    font-size: 1.2rem;
+    padding: 15px 0;
   }
 }
 
-.btn-school {
-  background-color: #ffd700;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.btn-office {
-  background-color: #ff0000;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-/* Hover effects for both buttons */
-.btn-school:hover, 
-.btn-office:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* School button specific hover */
-.btn-school:hover {
-  background-color: #ffc800;
-  color: #fff;
-}
-
-/* Office button specific hover */
-.btn-office:hover {
-  background-color: #e60000;
-  color: #fff;
-}
-
-/* Ripple effect for both buttons */
-.btn-school::after,
-.btn-office::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 5px;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.5);
-  opacity: 0;
-  border-radius: 100%;
-  transform: scale(1, 1) translate(-50%);
-  transform-origin: 50% 50%;
-}
-
-.btn-school:hover::after,
-.btn-office:hover::after {
-  animation: ripple 1s ease-out;
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(0, 0);
-    opacity: 0.5;
+@media (max-width: 480px) {
+  .greeting-text {
+    font-size: 2rem;
   }
-  100% {
-    transform: scale(20, 20);
-    opacity: 0;
+  
+  .welcome-text {
+    font-size: 1.2rem;
   }
-}
-
-/* Active (click) state */
-.btn-school:active, 
-.btn-office:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Focus state for accessibility */
-.btn-school:focus, 
-.btn-office:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(58, 185, 254, 0.5);
-}
-}
-  transition: transform 0.2s ease;
-}
+  
+  .button-group {
+    gap: 1rem;
+  }
+  
+  .btn-school, .btn-office {
+    width: 140px;
+    font-size: 1.1rem;
+    padding: 12px 0;
+  }
+} 

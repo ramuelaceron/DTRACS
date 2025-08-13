@@ -12,14 +12,14 @@
 }
 
 .default-bg {
-  background-color: #f2f1f6;
+  background-color: #f2f1f6;  
 }
 
 .auth-bg {
   background-image: url("./assets/images/start-up-1.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-attachment: fixed; /* Creates parallax effect */
 }
 
 .app-container > * {

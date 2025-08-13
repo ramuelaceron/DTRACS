@@ -7,7 +7,7 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import backgroundImage from './assets/images/start-up-1.png';
+import backgroundImage from './assets/images/Start-Up.png';
 
 function App() {
   const location = useLocation();
